@@ -1,0 +1,14 @@
+{
+  "name": "advanced-ts-for-teams",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matt Pocock <mattpocockvoice@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "ts-toolbelt": "^9.6.0"
+  }
+}

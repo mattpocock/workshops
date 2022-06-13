@@ -2,31 +2,33 @@ import { expect } from "./_utils";
 
 // TODO: Literal Number
 
-let num = undefined;
+const num = 1;
 
 expect<1>(num);
 
 // TODO: Literal String
 
-let str = undefined;
+const str = "matt";
 
 expect<"matt">(str);
 
 // TODO: Literal Boolean
 
-let bool = undefined;
+const bool = true;
 
 expect<true>(bool);
 
 // TODO: Array member
 
-let arr = undefined;
+const arr = ["matt"] as const;
 
 expect<"matt">(arr[0]);
 
 // TODO: Object property
 
-let obj = undefined;
+const obj = {
+  name: "matt",
+} as const;
 
 expect<"matt">(obj.name);
 
