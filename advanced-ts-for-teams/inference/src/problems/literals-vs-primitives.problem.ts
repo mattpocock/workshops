@@ -2,25 +2,19 @@ import { expect } from "./_utils";
 
 // TODO: Literal Number
 
-const num = 1;
+let num = 1;
 
 expect<1>(num);
 
 // TODO: Literal String
 
-const str = "matt";
+let str = "matt";
 
 expect<"matt">(str);
 
-// TODO: Literal Boolean
-
-const bool = true;
-
-expect<true>(bool);
-
 // TODO: Array member
 
-const arr = ["matt"] as const;
+const arr = ["matt"];
 
 expect<"matt">(arr[0]);
 
@@ -28,7 +22,7 @@ expect<"matt">(arr[0]);
 
 const obj = {
   name: "matt",
-} as const;
+};
 
 expect<"matt">(obj.name);
 

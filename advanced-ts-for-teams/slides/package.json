@@ -1,0 +1,12 @@
+{
+  "name": "slides",
+  "version": "1.0.0",
+  "author": "Matt Pocock <mattpocockvoice@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "ts-toolbelt": "^9.6.0"
+  }
+}
