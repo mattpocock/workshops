@@ -4,6 +4,8 @@ export {};
 // Exercise 1
 // ----------
 
+// TODO - improve this exercise (make it more relatable)
+
 const wrapCreateTreeWalker = (
   // Type this correctly!
   node: unknown,
@@ -28,7 +30,7 @@ const utils = {
 
 // Without changing the utils config above,
 // type the function below:
-const makeTheme = (themeParam: unknown) => {};
+const makeTheme = (themeParam: Parameters<typeof utils["makeTheme"]>[0]) => {};
 
 // This should error!
 makeTheme({

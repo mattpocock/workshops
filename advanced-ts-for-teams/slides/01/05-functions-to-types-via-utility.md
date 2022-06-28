@@ -19,6 +19,18 @@ type FuncReturn = unknown;
 
 <!--  -->
 
+# This is where TS gets scary
+
+```ts
+const func = async () => {
+  return "123";
+};
+
+type FuncReturn = Awaited<ReturnType<typeof func>>;
+```
+
+<!--  -->
+
 # Utility types
 
 TypeScript ships with a bunch of utility types built-in.
