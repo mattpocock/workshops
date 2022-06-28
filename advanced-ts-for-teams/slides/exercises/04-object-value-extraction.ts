@@ -22,7 +22,7 @@ const colors = {
     "800": "#800B0B",
     "900": "#4C0707",
   },
-} as const;
+};
 
 /**
  * 🛠 Create a type, Color, which is the type of
@@ -120,8 +120,6 @@ const colors = {
  *
  * type FlamingoColor = Flamingo[keyof Flamingo];
  */
-
-type FlamingoColor = typeof colors.flamingo["100" | "200"];
 
 /**
  * 🚁 Hover over FlamingoColor. It should be

@@ -39,8 +39,6 @@ type MyFuncReturn = Awaited<ReturnType<typeof myFunc>>;
  * 💡 This is called a generic type!
  */
 
-type ToString<TInput> = string;
-
 /**
  * 🚁 Hover over TInput. It'll tell you it's a
  * 'type parameter'.
@@ -52,8 +50,6 @@ type ToString<TInput> = string;
  *
  * type ToStringResult = ToString<number>;
  */
-
-type ToStringResult = ToString<number>;
 
 /**
  * 🚁 Hover over ToStringResult - it'll be inferred
