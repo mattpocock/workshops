@@ -62,15 +62,18 @@ type MyFuncReturn = Awaited<ReturnType<typeof myFunc>>;
  * type ToString<TInput> = boolean;
  *
  * 🕵️‍♂️ Try changing what we're returning in ToString
- * to TInput, and see what happens to ToStringResult
+ * to TInput, and see what happens to ToStringResult.
  *
  * type ToString<TInput> = TInput;
+ *
  */
 
 /**
  * 💡 Our ToString type helper above is exactly like
  * a function. It takes in some inputs and returns
  * some outputs.
+ *
+ * When it's declared, it looks like this:
  */
 
 //              ⬇️ input     ⬇️ input      ⬇️ output
@@ -78,6 +81,10 @@ type NameObject<TFirstName, TLastName> = {
   firstName: TFirstName;
   lastName: TLastName;
 };
+
+/**
+ * 💡 And when it's 'called', it looks like this:
+ */
 
 //   ⬇️ output            ⬇️ input    ⬇️ input
 type MyName = NameObject<"Matthew", "Pocock">;
@@ -97,9 +104,7 @@ type MyName = NameObject<"Matthew", "Pocock">;
  *
  * 🕵️‍♂️ Try adding a TMiddleName to the list of type
  * arguments, and seeing what errors pop up.
- */
-
-/**
+ *
  * 💡 You can call your type arguments anything you like -
  * but adding T to the start of them is a useful convention.
  */
