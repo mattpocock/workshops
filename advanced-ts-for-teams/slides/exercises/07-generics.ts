@@ -16,7 +16,7 @@ const element = { id: "1", name: "Matt" };
 type ElementWithoutId = Omit<typeof element, "id">;
 /**  ^ 🚁
  *
- * Here, we declare a type that omits the name
+ * Here, we declare a type that omits the id
  * attribute.
  */
 
