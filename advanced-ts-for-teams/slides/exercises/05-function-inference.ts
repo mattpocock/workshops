@@ -41,7 +41,7 @@ type MyFuncReturn = Awaited<ReturnType<typeof myFunc>>;
 
 /**
  * 🚁 Hover over TInput. It'll tell you it's a
- * 'type parameter'.
+ * '(type parameter)'.
  */
 
 /**
@@ -66,6 +66,11 @@ type MyFuncReturn = Awaited<ReturnType<typeof myFunc>>;
  *
  * type ToString<TInput> = TInput;
  *
+ * 🕵️‍♂️ Finally, try changing what you're passing to
+ * ToStringResult from number to boolean, and see
+ * what happens to ToStringResult.
+ *
+ * type ToStringResult = ToString<boolean>;
  */
 
 /**
@@ -229,4 +234,10 @@ type Result2 = Awaited<boolean>;
  *
  * 🕵️‍♂️ Same as above, see if you can figure it out
  * before you hover.
+ */
+
+/**
+ * 💡 There we go! We've learned how to extract
+ * arguments and return types from functions,
+ * and learned a LOT about generic signatures.
  */
