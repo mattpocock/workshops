@@ -6,9 +6,7 @@
  * Take the following example:
  */
 
-export const removeIdFromElement = <TInput extends { id: string }>(
-  input: TInput,
-): Omit<TInput, "id"> => {
+export const removeIdFromElement = (input: { id: string }) => {
   const { id, ...otherAttributes } = input;
   return otherAttributes;
 };
@@ -22,7 +20,7 @@ type ElementWithoutId = Omit<typeof element, "id">;
  * attribute.
  */
 
-const elementWithoutId = removeIdFromElement(element);
+const elementWithoutId = removeIdFromElement(element) as ElementWithoutId;
 /**   ^ 🚁                ^ 🚁
  * Here, we cast the the result of removeIdFromElement
  * to ElementWithoutId.
