@@ -14,12 +14,15 @@
  * 🚁 Hover over the `routes` variable name.
  * It should be inferred as `string[]` - an array
  * of strings
+ *
+ * let routes = ["/", "/users"];
+ *     ^ 🚁
  */
 
 /**
  * 🛠 Change the `let` above to a `const`:
  *
- * const routes = ['/', '/users']
+ * const routes = ['/', '/users'];
  */
 
 /**
@@ -27,6 +30,9 @@
  * It should STILL be inferred as string[] -
  * we're not getting literal inference on the
  * members of the array yet.
+ *
+ * const routes = ["/", "/users"];
+ *       ^ 🚁
  */
 
 /**
@@ -65,6 +71,14 @@
  * It should now be inferred as:
  *
  * readonly ["/", "/users"]
+ */
+
+/**
+ * 💡 `as const` gives you the power to deeply
+ * infer literals inside arrays AND objects (which
+ * we'll look at later). As we'll see, you can use
+ * it to start deriving types rather than declaring
+ * them - a key part of making TypeScript DRY.
  */
 
 export {};

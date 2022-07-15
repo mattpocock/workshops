@@ -6,7 +6,8 @@
 
 const routes = ["/", "/users"] as const;
 /**   ^ 🚁
- * Hover over `routes`. Because of as const,
+ *
+ * 🚁 Hover over `routes`. Because of as const,
  * we're getting literal inference on all
  * the members of this routes array
  */
@@ -86,6 +87,30 @@ const routes = ["/", "/users"] as const;
  */
 
 /**
+ * 🛠 Create a new type called FirstTwoRoutes. Declare
+ * it as RoutesAsType[0 | 1];
+ *
+ * type FirstTwoRoutes = RoutesAsType[0 | 1];
+ */
+
+/**
+ * 🚁 Hover over FirstTwoRoutes - it should be
+ * a union of the first two members of the routes
+ * array.
+ *
+ * type FirstTwoRoutes = RoutesAsType[0 | 1];
+ *      ^ 🚁
+ */
+
+/**
+ * 💡 This is cool! Passing a union type as a property
+ * access to a type RETURNS a union of those members.
+ *
+ * But we're not quite there yet - we need to return
+ * a union of ALL the members of the array.
+ */
+
+/**
  * 🛠 Create a new type called Route. Instead
  * of using RoutesAsType[0], we're going to declare
  * it as RoutesAsType[number]:
@@ -98,6 +123,11 @@ const routes = ["/", "/users"] as const;
  * a union of all members of the routes array:
  *
  * '/' | '/users' | '/other-members-of-the-array'
+ *
+ * 💡 We've done it! In this position, accessing
+ * the array with [number] means that it returns
+ * a union of all the members of the array. It acts
+ * as if it were 0 | 1 | 2 | 3 ...
  */
 
 /**
