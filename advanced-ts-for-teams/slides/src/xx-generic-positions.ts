@@ -95,3 +95,5 @@ mapOverArray([1, 2, 3], (item) => `${item}`);
  * mapOverArray([1, 2, 3], (item) => ({ item }));
  * mapOverArray([1, 2, 3], (item) => !!item);
  */
+
+export {};

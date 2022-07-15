@@ -13,7 +13,7 @@ type UserRoles = typeof userRoles;
 
 const canRolePerformAction = <TRole extends keyof UserRoles>(
   role: TRole,
-  action: UserRoles[TRole][number],
+  action: UserRoles[TRole][number]
 ): boolean => {
   const arrOfMembers = userRoles[role];
 
@@ -23,3 +23,5 @@ const canRolePerformAction = <TRole extends keyof UserRoles>(
 // Usage
 canRolePerformAction("user", "update");
 canRolePerformAction("anonymous", "view");
+
+export {};

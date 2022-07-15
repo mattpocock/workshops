@@ -10,6 +10,8 @@
  * let routes = ['/', '/users']
  */
 
+let routes = ["/", "/users"];
+
 /**
  * 🚁 Hover over the `routes` variable name.
  * It should be inferred as `string[]` - an array
@@ -66,3 +68,5 @@
  *
  * readonly ["/", "/users"]
  */
+
+export {};

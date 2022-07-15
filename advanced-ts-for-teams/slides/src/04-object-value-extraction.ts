@@ -149,3 +149,5 @@ const colors = {
  * and using the Obj[keyof Obj] strategy to grab
  * their property values.
  */
+
+export {};

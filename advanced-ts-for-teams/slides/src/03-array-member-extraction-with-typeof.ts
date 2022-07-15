@@ -132,3 +132,5 @@ const routes = ["/", "/users"] as const;
  * 🚁 Hover over Route - the type will be
  * just the same as before we refactored.
  */
+
+export {};

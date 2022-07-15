@@ -94,3 +94,5 @@ const isEqual = compare("a", 2);
  *
  * compare("a", "b");
  */
+
+export {};

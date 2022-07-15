@@ -91,3 +91,5 @@ type EventUnion =
 
 type ClickEvent = Extract<EventUnion, { type: "click" }>;
 //   ^ 🚁                                      ^ 🕵️‍♂️
+
+export {};

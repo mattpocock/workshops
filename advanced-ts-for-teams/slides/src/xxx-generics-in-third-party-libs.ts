@@ -206,7 +206,7 @@ const Posts = z.array(Post);
 
 const fetchWithSchema = async <TSchema extends z.ZodType>(
   schema: TSchema,
-  url: string,
+  url: string
 ): Promise<z.infer<TSchema>> => {
   const result = await fetch(url).then((res) => res.json());
   return schema.parse(result);
@@ -244,3 +244,5 @@ const posts = fetchWithSchema(Posts, "/posts");
  * 💡 Generics can be combined with third-party API's to make
  * amazing things.
  */
+
+export {};

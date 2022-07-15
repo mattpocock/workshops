@@ -56,3 +56,5 @@ const concatenateName = (firstName: string, lastName: string) => {};
  * 💡 You can declare literal types in the arguments of functions
  * to ensure that ONLY those values can be passed.
  */
+
+export {};
