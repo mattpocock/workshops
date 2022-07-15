@@ -15,7 +15,7 @@
 /**
  * 🛠 Declare a new variable with a let, called `lastName`
  *
- * const lastName = "Pocock";
+ * let lastName = "Pocock";
  */
 
 /**
