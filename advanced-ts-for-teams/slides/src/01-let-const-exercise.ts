@@ -7,19 +7,28 @@
 /**
  * 🚁 Hover over `firstName`. It should be
  * inferred as 'Matt'
+ *
+ * const firstName = "Matt";
+ *       ^ 🚁
  */
 
 /**
  * 🛠 Declare a new variable with a let, called `lastName`
+ *
+ * const lastName = "Pocock";
  */
 
 /**
  * 🚁 Hover over `lastName`. It should be
  * inferred as 'string'
+ *
+ * 💡 If a variable can't be updated, TypeScript will
+ * infer it as its literal type. So, declaring firstName
+ * with a const means it gets inferred as its literal: 'Matt'
  */
 
 /**
- * 🛠 Change the type annotations from:
+ * 🛠 In the function below, change the type annotations from:
  *
  * `firstName: string` -> `firstName: 'Matt'`
  * `lastName: string` -> `lastName: 'Pocock'`
@@ -43,4 +52,7 @@ const concatenateName = (firstName: string, lastName: string) => {};
 
 /**
  * ✅ The error above should be gone.
+ *
+ * 💡 You can declare literal types in the arguments of functions
+ * to ensure that ONLY those values can be passed.
  */
