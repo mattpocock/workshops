@@ -6,7 +6,7 @@
 
 export const compare = <TFirstArg, TSecondArg>(
   first: TFirstArg,
-  second: TSecondArg,
+  second: TSecondArg
 ) => {
   return first === second;
 };
