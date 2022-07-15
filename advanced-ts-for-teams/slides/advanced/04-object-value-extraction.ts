@@ -22,7 +22,7 @@ const colors = {
     "800": "#800B0B",
     "900": "#4C0707",
   },
-};
+} as const;
 
 /**
  * 🛠 Create a type, Color, which is the type of
@@ -31,12 +31,16 @@ const colors = {
  * type ColorsAsType = typeof colors;
  */
 
+type ColorsAsType = typeof colors;
+
 /**
  * 🛠 Create another type, Flamingo, which is the
  * 'flamingo' property of `ColorsAsType`:
  *
  * type Flamingo = ColorsAsType['flamingo'];
  */
+
+type Flamingo = ColorsAsType["flamingo"];
 
 /**
  * 💡 Note that `ColorsAsType.flamingo` would be
@@ -47,7 +51,11 @@ const colors = {
 /**
  * 🚁 Hover over Flamingo. Note that the keys of
  * the object are already being inferred - it's just
- * the values of the object that aren't.
+ * the values of the object that aren't. They're
+ * appearing as string instead of their literal value.
+ *
+ * type Flamingo = ColorsAsType["flamingo"];
+ *      ^ 🚁
  */
 
 /**
@@ -56,6 +64,8 @@ const colors = {
  *
  * type FlamingoKeys = keyof Flamingo;
  */
+
+type FlamingoKeys = keyof Flamingo;
 
 /**
  * 🚁 Hover over FlamingoKeys. It should be a
@@ -75,9 +85,9 @@ const colors = {
 
 /**
  * 💡 We can see that TypeScript's inference of
- * property keys is pretty good. But, property
- * values? Not so good. Let's firm it up with
- * 'as const'
+ * property keys is pretty good. But without as
+ * const, TypeScript won't infer the property
+ * values as their literals. Let's fix that.
  */
 
 /**
@@ -89,10 +99,8 @@ const colors = {
 /**
  * 🚁 Hover over `colors` - you'll now see
  * that all properties of the object are
- * readonly.
- *
- * 💡 Since they now can't be mutated, TypeScript
- * is safe to infer them as their literal type.
+ * readonly, and they're also being inferred
+ * as their literal types - not string.
  */
 
 /**
@@ -101,6 +109,8 @@ const colors = {
  *
  * type Flamingo50 = Flamingo['50'];
  */
+
+type Flamingo50 = Flamingo["50"];
 
 /**
  * 🚁 Hover over Flamingo50. It should be inferred
@@ -120,6 +130,8 @@ const colors = {
  *
  * type FlamingoColor = Flamingo[keyof Flamingo];
  */
+
+type FlamingoColor = Flamingo[keyof Flamingo];
 
 /**
  * 🚁 Hover over FlamingoColor. It should be
