@@ -1,3 +1,13 @@
 {
-  "groups": [{ "id": "examples", "color": "forestgreen" }]
+  "groups": [
+    { "id": "removeMapsFromObj", "color": "forestgreen" },
+    {
+      "id": "roleBasedAccess",
+      "color": "red"
+    },
+    {
+      "id": "wrapExampleLib",
+      "color": "rebeccapurple"
+    }
+  ]
 }

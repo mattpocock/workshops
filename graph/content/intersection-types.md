@@ -1,3 +1,4 @@
 ---
 deps: []
+group: "wrapExampleLib"
 ---

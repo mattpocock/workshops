@@ -1,3 +1,4 @@
 ---
 deps: ["keyof"]
+group: "removeMapsFromObj"
 ---

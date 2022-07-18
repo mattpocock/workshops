@@ -7,5 +7,5 @@ deps:
     "typeof",
     "intersection-types",
   ]
-group: "examples"
+group: "wrapExampleLib"
 ---

@@ -1,3 +1,4 @@
 ---
-deps: ["generics-in-functions"]
+deps: []
+group: "roleBasedAccess"
 ---
