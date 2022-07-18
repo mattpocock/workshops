@@ -1,0 +1,3 @@
+---
+deps: ["literals-vs-primitives"]
+---

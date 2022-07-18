@@ -1,6 +1,6 @@
 /**
  * 💡 We're going to examine how you can use 'as const'
- * to get literal inference on members of arrays
+ * to get literal inference on members of arrays.
  */
 
 /**

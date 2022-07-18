@@ -1,4 +1,10 @@
 /**
+ * 💡 In this exercise, we're going to see how TypeScript infers
+ * different types in different situations, based on whether
+ * the value is read-only or not.
+ */
+
+/**
  * 🛠 Declare a new variable with a const, called `firstName`. E.g:
  *
  * const firstName = 'Matt';

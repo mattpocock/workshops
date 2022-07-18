@@ -1,0 +1,3 @@
+---
+deps: ["basic-generic-syntax"]
+---

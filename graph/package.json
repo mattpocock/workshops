@@ -1,0 +1,17 @@
+{
+  "name": "graph",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matt Pocock <mattpocockvoice@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "graph-docs dev ./content"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.6",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "graph-docs-cli": "^0.0.11"
+  }
+}
