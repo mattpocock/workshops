@@ -9,12 +9,6 @@ type RemoveMapsFromObj<T> = {
 
 type RemoveMaps<T> = T extends `maps:${infer U}` ? U : T;
 
-/**
- * When it's OK to use any
- * Return types
- * Generics in functions
- * infer
- */
 const removeMapsFromObj = <T>(obj: T): RemoveMapsFromObj<T> => {
   const newObj = {} as any;
 
