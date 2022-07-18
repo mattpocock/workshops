@@ -1,3 +1,3 @@
 ---
-group: "roleBasedAccess"
+group: apiMappings
 ---

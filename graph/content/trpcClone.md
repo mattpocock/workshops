@@ -1,0 +1,10 @@
+---
+deps:
+  [
+    "typeof",
+    "extracting-parameters",
+    "extracting-return-types",
+    "generics-in-functions",
+    "extracting-promises",
+  ]
+---

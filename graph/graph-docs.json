@@ -8,6 +8,14 @@
     {
       "id": "wrapExampleLib",
       "color": "rebeccapurple"
+    },
+    {
+      "id": "createComponent",
+      "color": "cornflowerblue"
+    },
+    {
+      "id": "apiMappings",
+      "color": "goldenrod"
     }
   ]
 }

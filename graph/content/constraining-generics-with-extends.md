@@ -1,3 +1,4 @@
 ---
-deps: ["basic-generic-syntax", "generics-in-functions"]
+deps: ["basic-generic-syntax"]
+group: "createComponent"
 ---

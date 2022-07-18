@@ -1,4 +1,4 @@
 ---
 deps: ["literals-vs-primitives"]
-group: "roleBasedAccess"
+group: apiMappings
 ---

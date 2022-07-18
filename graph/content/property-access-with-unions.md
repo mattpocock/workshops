@@ -1,4 +1,4 @@
 ---
 deps: ["property-access"]
-group: "roleBasedAccess"
+group: apiMappings
 ---
