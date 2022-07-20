@@ -23,11 +23,11 @@
     },
     {
       "id": "isValidEmail",
-      "color": "green"
+      "color": "pink"
     },
     {
       "id": "databaseSeeder",
-      "color": "navyblue"
+      "color": "gray"
     }
   ]
 }

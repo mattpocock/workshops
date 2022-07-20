@@ -1,8 +1,8 @@
 window.addEventListener("securityPolicyViolation", (e) => {
+  // securityPolicyViolation events have a status code -
+  // why is this erroring?
   console.log(e.statusCode);
 });
-
-// 2
 
 import { z } from "zod";
 

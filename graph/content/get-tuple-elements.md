@@ -1,4 +1,4 @@
 ---
-deps: ["property-access-with-unions"]
+deps: ["property-access-with-unions", "tuples"]
 group: "roleBasedAccess"
 ---
