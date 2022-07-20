@@ -72,3 +72,11 @@ massageData({
  * 💡 This is kind of amazing - we're able to infer the TData
  * inside Result<TData> just by using it in our arguments set.
  */
+
+interface Client {
+  request: <T>(t: T) => T;
+}
+
+const client: Client = {
+  request: (t) => t,
+};

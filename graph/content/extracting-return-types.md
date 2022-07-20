@@ -1,4 +1,4 @@
 ---
-deps: ["basic-generic-syntax", "return-type-annotations"]
+deps: ["basic-generic-syntax"]
 group: "wrapExampleLib"
 ---

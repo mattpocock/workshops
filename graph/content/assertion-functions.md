@@ -1,4 +1,3 @@
 ---
-deps: []
 group: "isValidEmail"
 ---

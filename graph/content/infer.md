@@ -1,4 +1,4 @@
 ---
 deps: ["conditional-types"]
-group: "removeMapsFromObj"
+group: "conditionalTypes"
 ---

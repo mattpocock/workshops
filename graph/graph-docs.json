@@ -16,6 +16,18 @@
     {
       "id": "apiMappings",
       "color": "goldenrod"
+    },
+    {
+      "id": "conditionalTypes",
+      "color": "magenta"
+    },
+    {
+      "id": "isValidEmail",
+      "color": "green"
+    },
+    {
+      "id": "databaseSeeder",
+      "color": "navyblue"
     }
   ]
 }

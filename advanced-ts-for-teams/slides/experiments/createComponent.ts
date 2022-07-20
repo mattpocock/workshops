@@ -6,11 +6,11 @@ const createComponent = <TComponent extends Record<string, string>>(
   };
 };
 
-const getClasses = createComponent({
+const getButtonClasses = createComponent({
   primary: "bg-blue-300",
   secondary: "bg-green-300",
 });
 
-const classes = getClasses("primary");
+const classes = getButtonClasses("primary");
 
 export {};
