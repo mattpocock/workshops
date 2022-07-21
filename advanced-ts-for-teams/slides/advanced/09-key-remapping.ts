@@ -97,3 +97,5 @@ const newVal = removeMapsPrefixes({
 });
 
 type RemoveMaps<K extends PropertyKey> = K extends `maps:${infer U}` ? U : K;
+
+export {};
