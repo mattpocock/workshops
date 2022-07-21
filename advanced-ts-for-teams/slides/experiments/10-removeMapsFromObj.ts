@@ -1,7 +1,7 @@
 /**
  * 💡 In this example, we're getting a bunch of data
  * back from our API which is coming in with a funny
- * shape. Each key is being prefixed with :maps,
+ * shape. Each key is being prefixed with maps:,
  * like below.
  */
 
@@ -202,7 +202,7 @@ type ConditionalResult = string extends number ? true : false;
 
 /**
  * 💡 The check that we're writing is a bit trickier than this.
- * We need to check if TString is a string which has ":maps" at
+ * We need to check if TString is a string which has "maps:" at
  * the start. To do that, we'll need to use a string literal type:
  *
  * https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
