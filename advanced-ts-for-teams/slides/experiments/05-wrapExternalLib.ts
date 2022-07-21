@@ -7,7 +7,7 @@ const fetchUser = (id: string) => {
   });
 };
 
-const fetchUserWithFullName = async (
+export const fetchUserWithFullName = async (
   ...args: Parameters<typeof fetchUser>
 ): Promise<Awaited<ReturnType<typeof fetchUser>> & { fullName: string }> => {
   const user = await fetchUser(...args);
