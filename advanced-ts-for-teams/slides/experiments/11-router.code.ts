@@ -6,10 +6,10 @@ const makeRouter = <TConfig extends BaseRouterConfig>(
   _config: F.Narrow<TConfig>,
 ) => {
   return {
-    goTo: <TRoute extends keyof TConfig, TSearch = TConfig[TRoute]["search"]>(
+    goTo: <TRoute extends keyof TConfig>(
       route: TRoute,
-      search?: TSearch extends string[]
-        ? { [SearchParam in TSearch[number]]?: string }
+      search?: TConfig[TRoute]["search"] extends string[]
+        ? { [SearchParam in TConfig[TRoute]["search"][number]]?: string }
         : never,
     ) => {
       let newRoute = String(route);

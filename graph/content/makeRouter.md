@@ -4,7 +4,7 @@ deps:
     "f.narrow",
     "k-in-keyof",
     "get-tuple-elements",
-    "default-generics",
     "currying-function-generics",
+    "conditional-types",
   ]
 ---
