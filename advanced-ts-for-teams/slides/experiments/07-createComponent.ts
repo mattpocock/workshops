@@ -1,8 +1,8 @@
 export const createComponent = <TComponent extends Record<string, string>>(
   component: TComponent,
 ) => {
-  return (variant: keyof TComponent) => {
-    return component[variant];
+  return (variant: keyof TComponent, ...otherClasses: string[]) => {
+    return component[variant] + otherClasses.join(" ");
   };
 };
 

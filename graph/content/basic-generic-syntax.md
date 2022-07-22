@@ -1,3 +1,3 @@
 ---
-group: "wrapExampleLib"
+group: "wrapExternalLib"
 ---

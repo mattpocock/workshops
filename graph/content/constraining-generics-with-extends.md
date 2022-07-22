@@ -1,4 +1,4 @@
 ---
 deps: ["basic-generic-syntax"]
-group: "createComponent"
+group: "wrapExternalLib"
 ---

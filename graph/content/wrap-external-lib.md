@@ -6,6 +6,7 @@ deps:
     "extracting-promises",
     "typeof",
     "intersection-types",
+    "constraining-generics-with-extends",
   ]
-group: "wrapExampleLib"
+group: "wrapExternalLib"
 ---
