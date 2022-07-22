@@ -1,4 +1,4 @@
-const createComponent = <TComponent extends Record<string, string>>(
+export const createComponent = <TComponent extends Record<string, string>>(
   component: TComponent,
 ) => {
   return (variant: keyof TComponent) => {
@@ -12,5 +12,3 @@ const getButtonClasses = createComponent({
 });
 
 const classes = getButtonClasses("primary");
-
-export {};

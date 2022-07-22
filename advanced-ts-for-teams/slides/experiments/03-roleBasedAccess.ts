@@ -30,7 +30,7 @@ export type Role = keyof typeof userAccessModel;
  * a type (with typeof), then grabbing the keys with keyof.
  */
 
-// export type Action = typeof userAccessModel[Role][number];
+export type Action = typeof userAccessModel[Role][number];
 /**         ^ 🚁
  *
  * 🚁 Hover Action. This is... interesting. What's [number]
@@ -38,8 +38,7 @@ export type Role = keyof typeof userAccessModel;
  */
 
 export const canUserAccess = (role: Role, action: Action) => {
-  const possibleActions = userAccessModel[role];
-  return possibleActions.includes(action as any);
+  return (userAccessModel[role] as ReadonlyArray<Action>).includes(action);
   /**
    * 🕵️‍♂️ Hmmm, the ReadonlyArray<Action> looks a bit scary. Try
    * removing it to see what happens.
@@ -65,10 +64,6 @@ export const canUserAccess = (role: Role, action: Action) => {
  *
  * type Action = unknown;
  */
-
-type UserAccessModelValues = typeof userAccessModel[Role];
-
-type Action = UserAccessModelValues[number];
 
 /**
  * 💡 We can figure out the first couple of pieces of
@@ -206,4 +201,10 @@ type Action = UserAccessModelValues[number];
  *
  * For the curious - yes, I found a different solution -
  * ReadonlyArray<Action> - which I'll explain in the break.
+ */
+
+/**
+ * 💡 Great job! We learned about accessing array members via [number],
+ * started our find-in-definition journey, and learned that sometimes,
+ * any is OK.
  */
