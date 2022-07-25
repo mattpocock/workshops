@@ -176,7 +176,7 @@ export const removeMapsPrefixFromObj = <TObj>(
  * an 'extends' keyword. For now, make both branches return TString:
  *
  * type RemoveMaps = TString extends any ? TString : TString;
- * //             ⬆️ Conditional         ⬆️ True    ⬆️ False
+ * //                ⬆️ Conditional         ⬆️ True    ⬆️ False
  */
 
 /**
@@ -210,10 +210,7 @@ type ConditionalResult = string extends number ? true : false;
  * 🛠 Change RemoveMaps' conditional check so that it checks if
  * TString extends `maps:${string}`
  *
- * type RemoveMaps<TString> = TString extends `maps:${string}` ? TString : TString;
- *
- * 💡 `maps:${string}` is a way of expressing _any_ string
- * which starts with "maps:". It's kind of like a regex.
+ * Solution #1
  *
  * 🛠 Let's check this is working by changing the true result
  * to 'hooray':
@@ -265,9 +262,7 @@ type Data = GetData<{ data: number }>;
  * Replace ${string} with ${infer TRest}, then return it from the
  * true portion of the check.
  *
- * type RemoveMaps<TString> = TString extends `maps:${infer TRest}`
- *   ? TRest
- *   : TString;
+ * Solution #2
  */
 
 /**
@@ -290,11 +285,11 @@ type Data = GetData<{ data: number }>;
  * 🛠 We know we need to create a new object based on the keys
  * of the previous object. For that, we'll use the Key in keyof
  * pattern that we've seen before. We want to preserve the object's
- * values, so you can access the value via TObj[Key].
+ * values.
  *
- * type RemoveMapsPrefixFromObj<TObj> = {
- *   [Key in keyof TObj]: TObj[Key];
- * };
+ * https://www.typescriptlang.org/docs/handbook/2/mapped-types.html
+ *
+ * Solution #3
  */
 
 /**
@@ -370,4 +365,35 @@ type Data = GetData<{ data: number }>;
 /**
  * 💡 Great job! We've covered conditional types, infer and
  * key remapping all in one example.
+ */
+
+/**
+ * 🕵️‍♂️ Stretch goal 1: Create a type helper which can remove ":post"
+ * suffixes from a string.
+ *
+ * type Target = "attribute:post";
+ *
+ * type PostRemoved = RemovePostSuffix<Target>;
+ *      ^ 🚁
+ *
+ * PostRemoved should be "attribute".
+ *
+ * Solution #4
+ *
+ * 🕵️‍♂️ Stretch goal 2:
+ *
+ * Create an object remapper which adds '_new' as a suffix to all
+ * object keys.
+ *
+ * interface Obj {
+ *   a: number;
+ *   b: number;
+ * }
+ *
+ * type NewObj = AddNewKeys<Obj>;
+ *      ^ 🚁
+ *
+ * NewObj should be { a_new: number; b_new: number }
+ *
+ * Solution #5
  */
