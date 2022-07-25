@@ -34,7 +34,7 @@ const somethingThatMightBeAUser = {};
 const parsedUser = User.parse(somethingThatMightBeAUser);
 /**   ^ 🚁
  *
- * User.parse will error if it's called with something that
+ * 🚁 User.parse will error if it's called with something that
  * doesn't match the schema. That means TypeScript can safely
  * consider this as an object matching that schema.
  *
@@ -57,14 +57,11 @@ const parsedUser = User.parse(somethingThatMightBeAUser);
  * into the type world.
  */
 
+type UserType = z.infer<typeof User>;
+
 /**
  * 🚁 Try hovering over UserType - it should be the same
  * shape as you declared in the User.
- */
-
-/**
- * 💡 Zod can enable some pretty exciting API's when used
- * in combination with generics.
  */
 
 const Users = z.array(User);
@@ -75,6 +72,13 @@ const fetchUsers = async () => {
 
   return Users.parse(result);
 };
+
+const Post = z.object({
+  slug: z.string(),
+  content: z.string(),
+});
+
+const Posts = z.array(Post);
 
 const fetchPosts = async (userId: string) => {
   //  ^ 🚁
@@ -197,24 +201,6 @@ const fetchPosts = async (userId: string) => {
  * ): Promise<z.infer<TSchema>> => {
  */
 
-const Post = z.object({
-  slug: z.string(),
-  content: z.string(),
-});
-
-const Posts = z.array(Post);
-
-const fetchWithSchema = async <TSchema extends z.ZodType>(
-  schema: TSchema,
-  url: string
-): Promise<z.infer<TSchema>> => {
-  const result = await fetch(url).then((res) => res.json());
-  return schema.parse(result);
-};
-
-const posts = fetchWithSchema(Posts, "/posts");
-//    ^?
-
 /**
  * ✅ The error should have disappeared!
  *
@@ -244,5 +230,3 @@ const posts = fetchWithSchema(Posts, "/posts");
  * 💡 Generics can be combined with third-party API's to make
  * amazing things.
  */
-
-export {};

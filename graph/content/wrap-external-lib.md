@@ -7,6 +7,7 @@ deps:
     "typeof",
     "intersection-types",
     "constraining-generics-with-extends",
+    "default-generics",
   ]
 group: "wrapExternalLib"
 ---
