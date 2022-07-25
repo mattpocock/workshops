@@ -14,20 +14,15 @@ interface DbShape {
   posts: Record<string, Post>;
 }
 
-export class DbSeeder<
-  Db extends DbShape = {
-    users: {};
-    posts: {};
-  },
-> {
-  public users: Db["users"] = {};
-  public posts: Db["posts"] = {};
+export class DbSeeder<TDatabase extends DbShape> {
+  public users: DbShape["users"] = {};
+  public posts: DbShape["posts"] = {};
 
   addUser = <Id extends string>(
     id: Id,
     user: Omit<User, "id">,
-  ): DbSeeder<Db & { users: Db["users"] & Record<Id, User> }> => {
-    (this.users as DbShape["users"])[id] = {
+  ): DbSeeder<TDatabase & { users: TDatabase["users"] & Record<Id, User> }> => {
+    this.users[id] = {
       ...user,
       id: id,
     };
@@ -37,8 +32,8 @@ export class DbSeeder<
   addPost = <Id extends string>(
     id: Id,
     post: Omit<Post, "id">,
-  ): DbSeeder<Db & { posts: Db["posts"] & Record<Id, Post> }> => {
-    (this.posts as DbShape["posts"])[id] = {
+  ): DbSeeder<TDatabase & { posts: TDatabase["posts"] & Record<Id, Post> }> => {
+    this.posts[id] = {
       ...post,
       id,
     };
@@ -53,8 +48,8 @@ export class DbSeeder<
     // PSEUDOCODE: actually add users/posts to database
 
     return {
-      users: this.users,
-      posts: this.posts,
+      users: this.users as TDatabase["users"],
+      posts: this.posts as TDatabase["posts"],
     };
   };
 }
