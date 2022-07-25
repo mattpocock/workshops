@@ -96,42 +96,6 @@ routes.goTo("/dashboard", {
  * Solution #2
  */
 
-const makeRouter2 = <TConfig extends BaseRouterConfig>(
-  config: F.Narrow<TConfig>,
-) => {
-  return {
-    config,
-    goTo: <TRoute extends keyof TConfig>(
-      route: TRoute,
-      search?: TConfig[TRoute]["search"] extends [string, ...string[]]
-        ? TupleToSearchParams<TConfig[TRoute]["search"]>
-        : undefined,
-    ) => {},
-    getSearch: <TRoute extends keyof TConfig>(
-      route: TRoute,
-    ): TConfig[TRoute]["search"] extends [string, ...string[]]
-      ? TupleToSearchParams<TConfig[TRoute]["search"]> | undefined
-      : undefined => {
-      // Runtime: Grab the search params from the route
-
-      return undefined;
-    },
-  };
-};
-
-type TupleToSearchParams<TTuple extends string[]> = {
-  [SearchParam in TTuple[number]]?: string;
-};
-
-const routes2 = makeRouter2({
-  "/": {},
-  "/users": {
-    search: [],
-  },
-});
-
-routes2.goTo("/users", {});
-
 /**
  * 🛠 Try out your new function by declaring a new variable,
  * routes2, which is the return of makeRouter2.
