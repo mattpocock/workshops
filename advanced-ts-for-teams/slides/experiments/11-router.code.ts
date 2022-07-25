@@ -3,9 +3,10 @@ import { F } from "ts-toolbelt";
 type BaseRouterConfig = Record<string, { search?: string[] }>;
 
 const makeRouter = <TConfig extends BaseRouterConfig>(
-  _config: F.Narrow<TConfig>,
+  config: F.Narrow<TConfig>,
 ) => {
   return {
+    config,
     goTo: <TRoute extends keyof TConfig>(
       route: TRoute,
       search?: TConfig[TRoute]["search"] extends string[]
